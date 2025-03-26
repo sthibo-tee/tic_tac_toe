@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:tic_tac_toe/game/components/widgets/game.dart';
+// import 'package:tic_tac_toe/game/components/widgets/main_game.dart';
+import 'package:tic_tac_toe/game/menu.dart';
 
 void main() {
   runApp(const MainApp());
@@ -9,12 +12,14 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      initialRoute: "/",
+      routes: {
+        "/": (context) => Menu(),
+        "/game": (context) => Game(), 
+        // "/play": (context) => Game(),
+      },
     );
   }
 }

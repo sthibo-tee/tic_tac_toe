@@ -27,6 +27,15 @@ class _GameScreenState extends State<GameScreen> {
       appBar: AppBar(
         title: const Text('Tic Tac Toe'),
         centerTitle: true,
+        actions: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: IconButton(
+              icon: const Icon(Icons.refresh),
+              onPressed: () => _gameLogic.resetGame(),
+            ),
+          ),
+        ],
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,

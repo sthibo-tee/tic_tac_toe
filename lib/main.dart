@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:tic_tac_toe/game/components/widgets/game_screen.dart';
-// import 'package:tic_tac_toe/game/components/widgets/main_game.dart';
 import 'package:tic_tac_toe/game/menu.dart';
 
 void main() {
@@ -18,7 +17,6 @@ class MainApp extends StatelessWidget {
       routes: {
         "/": (context) => Menu(),
         "/game": (context) => GameScreen(), 
-        // "/play": (context) => Game(),
       },
     );
   }
